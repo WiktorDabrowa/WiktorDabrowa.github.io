@@ -434,11 +434,8 @@ body{
   border-radius: 50%;
   object-fit: cover;
   position:absolute;
-  opacity:0;
+  opacity:0.8;
   transition:1.5s
-}
-.hobby:hover .hobby-photo{
-  opacity:0.8
 }
 .hobby-content {
   position:absolute;
@@ -532,10 +529,13 @@ body{
   .nav {
     justify-content: space-around;
     gap:0;
-    padding: 0 0.5rem 0 0.5rem
+    font-size:smaller
+  }
+  .button{
+    font-size: 0.7rem;
   }
   .button::after{
-    top:35px
+    top:0.85rem
   }
   /* Page 1 */
   #page-1{
