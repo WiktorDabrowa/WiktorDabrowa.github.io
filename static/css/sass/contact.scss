@@ -1,0 +1,138 @@
+@use 'variables';
+
+.contact {
+    padding:0 2rem;
+
+    .caption {
+        font-size:4rem;
+        -webkit-text-fill-color: variables.$color-highlight;
+        -webkit-text-stroke-width: 2px;
+        transform:translateY(8rem);
+        
+        h2 {
+            display:inline-block;
+            margin:0;
+            rotate: -7deg;
+            transform-origin: 0;
+            transform: translateX(-20px);
+            opacity:0;
+        }
+
+        svg {
+            rotate: 50deg;
+            margin-left:2rem;
+            transform: translateY(-3rem)
+        }
+    }
+
+    .contact-cards {
+        display: flex;
+        justify-content: end;
+        overflow:hidden;
+        
+        .contact-card {
+            width:15%;
+            min-width:fit-content;
+            border:2px solid black;
+            border-bottom:0;
+            border-radius:2rem 2rem 0 0;
+            margin:0 0.1rem;
+            overflow:hidden;
+            transition:0.5s;
+            transform:translateY(15rem);
+
+            .card-title {
+                height:4rem;
+                text-align: center;
+                font-size:2.5rem;
+                padding:0.5rem;
+                background-color: variables.$color-main;
+                -webkit-text-fill-color: variables.$color-highlight;
+                -webkit-text-stroke-width: 1.5px;
+                border-bottom:2px solid black;
+            }
+            
+            .card-content {
+                height:8rem;
+                background-color: white;
+                display:flex;
+                justify-content: center;
+                align-items: center;
+                padding:5px;
+
+                span {
+                    font-size:100px;
+                }
+                svg {
+                    width:100%
+                }
+            }
+
+            &:hover {
+                transform: translateY(0rem) !important
+            }
+        }
+    }
+}
+
+@media (max-width: variables.$media-breakpoint) {
+
+    .contact {
+        padding:0;
+
+        .caption {
+            font-size:3rem;
+            transform: translateY(6rem);
+            margin-left:1rem;
+            margin-top:5rem;
+            white-space: nowrap;
+
+            svg {
+                scale:0.7;
+                transform-origin:left;
+                rotate:calc(90deg)
+            }
+        }
+
+        .contact-cards {
+            margin: 0 0.5rem;
+            justify-content: end;
+
+            .contact-card .card-title{
+                font-size:2rem;
+                -webkit-text-stroke-width: 0.9px;
+                height:3rem;
+            }
+        }
+    }
+}
+
+@media (max-width: variables.$media-breakpoint-small) {
+    .contact {
+        padding:0;
+
+        .caption {
+            font-size:2rem;
+            transform: translateY(6rem);
+            margin-left:1rem;
+            margin-top:5rem;
+        }
+
+        .contact-cards {
+            margin: 0 0.5rem;
+            justify-content: center;
+
+            .contact-card {
+                width: unset;
+                min-width: unset;
+                
+                .card-title{
+                    font-size:1.4rem;
+                    -webkit-text-stroke-width: 0.9px;
+                    height:3rem;
+                }
+            
+            }
+        }
+    }
+}

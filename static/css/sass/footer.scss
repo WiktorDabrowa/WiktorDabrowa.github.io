@@ -1,0 +1,19 @@
+@use 'variables';
+
+.footer {
+    background-color: variables.$color-main;
+    height:variables.$navbar-height;
+    font-size:1.5rem;
+    font-weight: 100;
+    display:flex;
+    align-items: center;
+    padding:2rem;
+    border-top:2px solid black;
+    z-index:10;
+}
+
+@media (max-width: variables.$media-breakpoint-small) {
+    .footer {
+        font-size:1rem;
+    }
+}
