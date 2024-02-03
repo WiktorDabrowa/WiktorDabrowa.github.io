@@ -26,6 +26,10 @@ a {
     color:black
 }
 
+.wrapper {
+    overflow-x:hidden
+}
+
 @media (max-width: variables.$media-breakpoint-small) {
 
     .hide-on-small {
