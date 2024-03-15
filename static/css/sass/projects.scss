@@ -22,59 +22,60 @@
             display:flex;
             align-items: center;
             position:relative;
-            
-            .project-card {
-                opacity:0;
-                width:100%;
-                min-width: 15rem;
-                position:absolute;
-                background-color: white;
-                border:2px solid black;
-                border-radius:2rem;
-                overflow: hidden;
-                aspect-ratio: 1/1.5;
-                box-shadow: 5px 5px 0 0 black;
-                transition:1s;
-                
-                .card-title {
-                    padding:1rem;
-                    background-color: variables.$color-main;
-                    font-size:1.25rem;
-                    -webkit-text-stroke-width: 1px;
-                    -webkit-text-fill-color: variables.$color-highlight;
-                    text-align: center;
-                    border-bottom:2px solid black;
-                    h3 {
-                        margin:0
+
+                .project-card {
+                    opacity:0;
+                    width:100%;
+                    min-width: 15rem;
+                    position:absolute;
+                    background-color: white;
+                    border:2px solid black;
+                    border-radius:2rem;
+                    overflow: hidden;
+                    aspect-ratio: 1/1.5;
+                    box-shadow: 5px 5px 0 0 black;
+                    transition:1s;
+                    
+                    .card-title {
+                        padding:1rem;
+                        background-color: variables.$color-main;
+                        font-size:1.25rem;
+                        -webkit-text-stroke-width: 1px;
+                        -webkit-text-fill-color: variables.$color-highlight;
+                        text-align: center;
+                        border-bottom:2px solid black;
+                        h3 {
+                            margin:0
+                        }
+                    }
+    
+                    .card-content {
+                        overflow-y:scroll;
+                        height:80%
+                    }
+    
+                    &:nth-child(1) {
+                        rotate: -10deg;
+                        transform:translateX(-5rem);
+                        z-index:3
+                    }
+    
+                    &:nth-child(2) {
+                        rotate: -2deg;
+                        z-index:2
+                    }
+    
+                    &:nth-child(3) {
+                        rotate: 8deg;
+                        transform:translateX(5rem);
+                        z-index:1
+                    }
+    
+                    &:hover {
+                        cursor:pointer;
+                        scale:1.05
                     }
                 }
-
-                .card-content {
-                    overflow-y:scroll
-                }
-
-                &:nth-child(1) {
-                    rotate: -10deg;
-                    transform:translateX(-5rem);
-                    z-index:3
-                }
-
-                &:nth-child(2) {
-                    rotate: -2deg;
-                    z-index:2
-                }
-
-                &:nth-child(3) {
-                    rotate: 8deg;
-                    transform:translateX(5rem);
-                    z-index:1
-                }
-
-                &:hover {
-                    cursor:pointer;
-                    scale:1.05
-                }
-            }
         }
 
         &:hover {
@@ -136,9 +137,13 @@
         padding:2rem;
         .text {
             margin-right:2rem;
-            text-align: left;
             position:relative;
+            text-align: justify;
             opacity:0;
+
+            h2 {
+                text-align: center;
+            }
 
             .my-projects-text {
                 font-size:4rem;

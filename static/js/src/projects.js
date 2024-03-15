@@ -1,7 +1,6 @@
 import anime from '../../../node_modules/animejs/lib/anime.es.js';
 // TODO: 
 // Project viewing or improve readmes on github and link through cards???
-// Change animation 
 
 function slideInElements() {
     const text = document.querySelector('.text');
@@ -10,7 +9,6 @@ function slideInElements() {
     const arrowBody = arrow[0];
     const arrowHead = [arrow[1], arrow[2]];
     const arrowDelay = 1000
-    console.log(arrow)
     anime({
         targets: text,
         opacity: [0,1],

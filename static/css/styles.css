@@ -201,6 +201,14 @@ header.header .links .navigation .navigation--links .navigation--link .navigatio
   justify-content: center;
   transition: 0.5s;
   transform: translateX(500px);
+  overflow: hidden;
+  box-shadow: 1rem 1rem 0 0 black;
+}
+.introduction .introduction--image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
 }
 .introduction .introduction--image-container:hover {
   right: -50px;
@@ -341,6 +349,7 @@ header.header .links .navigation .navigation--links .navigation--link .navigatio
 }
 .projects .left .cards .project-card .card-content {
   overflow-y: scroll;
+  height: 80%;
 }
 .projects .left .cards .project-card:nth-child(1) {
   rotate: -10deg;
@@ -407,9 +416,12 @@ header.header .links .navigation .navigation--links .navigation--link .navigatio
 }
 .projects .right .text {
   margin-right: 2rem;
-  text-align: left;
   position: relative;
+  text-align: justify;
   opacity: 0;
+}
+.projects .right .text h2 {
+  text-align: center;
 }
 .projects .right .text .my-projects-text {
   font-size: 4rem;
@@ -538,7 +550,7 @@ header.header .links .navigation .navigation--links .navigation--link .navigatio
 }
 .about-me .left .about-me-card .card-content {
   padding: 2rem;
-  text-align: center;
+  text-align: justify;
   min-height: fit-content;
 }
 .about-me .left .about-me-card .question-icon {
