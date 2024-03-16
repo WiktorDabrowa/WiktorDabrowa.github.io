@@ -526,7 +526,6 @@ header.header .links .navigation .navigation--links .navigation--link .navigatio
 .about-me .left .about-me-card {
   background-color: white;
   width: 80%;
-  height: 30rem;
   border: 2px solid black;
   border-radius: 2rem;
   box-shadow: 8px 8px 0 0 black;
@@ -534,6 +533,7 @@ header.header .links .navigation .navigation--links .navigation--link .navigatio
   position: relative;
   opacity: 0;
   transform: translateX(-20px);
+  min-height: 30rem;
 }
 .about-me .left .about-me-card .card-title {
   border-bottom: 2px solid black;
@@ -600,7 +600,6 @@ header.header .links .navigation .navigation--links .navigation--link .navigatio
   .about-me .left .about-me-card {
     width: 80%;
     max-width: 50rem;
-    height: auto;
   }
   .about-me .left .about-me-card .question-icon:nth-child(1) {
     bottom: 60%;
@@ -621,6 +620,12 @@ header.header .links .navigation .navigation--links .navigation--link .navigatio
   }
 }
 @media (max-width: 600px) {
+  .about-me .left .about-me-card {
+    min-height: unset;
+  }
+  .about-me .left .about-me-card .card-content {
+    font-size: 0.7rem;
+  }
   .about-me .right {
     margin-top: 5rem;
   }
